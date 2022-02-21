@@ -1,0 +1,55 @@
+﻿@model EmployeeViewModel
+
+<div class="row" style="margin-top: 50px;">
+    <div class="col-md-8 offset-5">
+        <form asp-action="Save">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4 class="display-4">Калкулатор</h4>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.FirstName" class="control-label"></label>
+                        <input asp-for="@Model.FirstName" class="form-control" readonly />
+                        <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.FamilyName" class="control-label"></label>
+                        <input asp-for="@Model.FamilyName" class="form-control" readonly />
+                        <span asp-validation-for="@Model.FamilyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.GrossPay" class="control-label"></label>
+                        <input asp-for="@Model.GrossPay" class="form-control" readonly />
+                        <span asp-validation-for="@Model.GrossPay" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.IncomeTax" class="control-label"></label>
+                        <input asp-for="@Model.IncomeTax" class="form-control" readonly />
+                        <span asp-validation-for="@Model.IncomeTax" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.HealthAndSocialInsuranceTax" class="control-label"></label>
+                        <input asp-for="@Model.HealthAndSocialInsuranceTax" class="form-control" readonly />
+                        <span asp-validation-for="@Model.HealthAndSocialInsuranceTax" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.TaxesTotal" class="control-label"></label>
+                        <input asp-for="@Model.TaxesTotal" class="form-control" readonly />
+                        <span asp-validation-for="@Model.TaxesTotal" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.NetPay" class="control-label"></label>
+                        <input asp-for="@Model.NetPay" class="form-control" readonly />
+                        <span asp-validation-for="@Model.NetPay" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Запази" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Назад</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

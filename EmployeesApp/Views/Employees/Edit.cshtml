@@ -1,0 +1,54 @@
+﻿@model EmployeeViewModel
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Редактиране на служител</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Edit">
+                    <div class="form-group">
+                        <label asp-for="@Model.FirstName" class="control-label"></label>
+                        <input asp-for="@Model.FirstName" class="form-control" />
+                        <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.FamilyName" class="control-label"></label>
+                        <input asp-for="@Model.FamilyName" class="form-control" />
+                        <span asp-validation-for="@Model.FamilyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.GrossPay" class="control-label"></label>
+                        <input asp-for="@Model.GrossPay" class="form-control" />
+                        <span asp-validation-for="@Model.GrossPay" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.IncomeTax" class="control-label"></label>
+                        <input asp-for="@Model.IncomeTax" class="form-control" readonly />
+                        <span asp-validation-for="@Model.IncomeTax" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.HealthAndSocialInsuranceTax" class="control-label"></label>
+                        <input asp-for="@Model.HealthAndSocialInsuranceTax" class="form-control" readonly />
+                        <span asp-validation-for="@Model.HealthAndSocialInsuranceTax" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.TaxesTotal" class="control-label"></label>
+                        <input asp-for="@Model.TaxesTotal" class="form-control" readonly />
+                        <span asp-validation-for="@Model.TaxesTotal" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.NetPay" class="control-label"></label>
+                        <input asp-for="@Model.NetPay" class="form-control" readonly />
+                        <span asp-validation-for="@Model.NetPay" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Запази" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="All">Към всички</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
