@@ -1,5 +1,6 @@
 ﻿using EmployeesApp.Data.Common;
 using EmployeesApp.Data.ViewModels;
+using System;
 
 namespace EmployeesApp.Data.Helpers
 {
@@ -8,6 +9,11 @@ namespace EmployeesApp.Data.Helpers
         public static EmployeeViewModel CalculateNetPayAndTaxes(EmployeeViewModel employee)
         {
             var grossPay = employee.GrossPay;
+
+            if (grossPay < 0 || grossPay > 100000)
+            {
+                throw new ArgumentOutOfRangeException("Value must be between 0 and 100.000.");
+            }
 
             if (grossPay <= GlobalConstants.MinimumTreshold)
             {

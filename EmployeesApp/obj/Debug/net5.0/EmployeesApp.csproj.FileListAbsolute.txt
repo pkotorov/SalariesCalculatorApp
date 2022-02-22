@@ -1,4 +1,3 @@
-C:\Users\petar\source\repos\EmployeesApp\EmployeesApp\obj\Debug\net5.0\EmployeesApp.csproj.AssemblyReference.cache
 C:\Users\petar\source\repos\EmployeesApp\EmployeesApp\obj\Debug\net5.0\EmployeesApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\petar\source\repos\EmployeesApp\EmployeesApp\obj\Debug\net5.0\EmployeesApp.AssemblyInfoInputs.cache
 C:\Users\petar\source\repos\EmployeesApp\EmployeesApp\obj\Debug\net5.0\EmployeesApp.AssemblyInfo.cs

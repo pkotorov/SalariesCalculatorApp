@@ -1,5 +1,6 @@
 ﻿using EmployeesApp.Data.Helpers;
 using EmployeesApp.Data.ViewModels;
+using System;
 using Xunit;
 
 namespace EmployeesApp.Tests
@@ -316,6 +317,28 @@ namespace EmployeesApp.Tests
             employee = Calculator.CalculateNetPayAndTaxes(employee);
 
             Assert.Equal(2950, employee.NetPay);
+        }
+
+        [Fact]
+        public void Should_Throw_An_Error_When_GrossPay_Is_Less_Than_Zero()
+        {
+            var employee = new EmployeeViewModel
+            {
+                GrossPay = -1
+            };
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => Calculator.CalculateNetPayAndTaxes(employee));
+        }
+
+        [Fact]
+        public void Should_Throw_An_Error_When_GrossPay_Is_More_Than_One_Hundred_Thousand()
+        {
+            var employee = new EmployeeViewModel
+            {
+                GrossPay = 100001
+            };
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => Calculator.CalculateNetPayAndTaxes(employee));
         }
     }
 }
